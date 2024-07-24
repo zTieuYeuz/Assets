@@ -1,0 +1,24 @@
+<?php
+
+return [
+    'actions' 	                => 'Acciones',
+    'add'    	                => 'Agregar nuevo',
+    'cancel'                    => 'Cancelar',
+    'checkin_and_delete'  	    => 'Ingresar todo / Eliminar usuario',
+    'delete'  	                => 'Eliminar',
+    'edit'    	                => 'Editar',
+    'restore' 	                => 'Restaurar',
+    'remove'                    => 'Eliminar',
+    'request'                   => 'Solicitud',
+    'submit'  	                => 'Enviar',
+    'upload'                    => 'Cargar',
+    'select_file'				=> 'Seleccionar un archivo...',
+    'select_files'				=> 'Seleccionar archivos...',
+    'generate_labels'           => '{1} Generar Etiqueta|[2,*] Generar Etiquetas',
+    'send_password_link'        => 'Enviar enlace de restablecimiento de contraseña',
+    'go'                        => 'Ir',
+    'bulk_actions'              => 'Acciones en masa',
+    'add_maintenance'           => 'Añadir mantenimiento',
+    'append'                    => 'Añadir',
+    'new'                       => 'Nuevo',
+];

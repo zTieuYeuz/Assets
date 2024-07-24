@@ -1,0 +1,41 @@
+version: '3.1'
+
+services:
+  snipeit:
+    image: snipe/snipe-it
+    container_name: snipeit
+    depends_on:
+      - db
+    ports:
+      - "8000:80"
+    environment:
+      - APP_ENV=production
+      - APP_DEBUG=false
+      - APP_KEY=base64:uywZRZpOrRaCo0zOigTcFV3pppCyxOFd+di5DNxfoYg=
+      - DB_CONNECTION=mysql
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_DATABASE=snipeit
+      - DB_USERNAME=snipeit
+      - DB_PASSWORD=itadmin
+      - MAIL_FROM_ADDR=thoaitran@vus-etsc.edu.vn
+      - APP_URL=http://192.168.10.24:8000   #điền ip của bạn vào đây
+    volumes:
+      - snipeit-data:/var/lib/snipeit
+    
+
+  db:
+    image: mysql:5.7
+    container_name: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_DATABASE=snipeit
+      - MYSQL_USER=snipeit
+      - MYSQL_PASSWOR=itadmin
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  snipeit-data:
+  mysql-data:
