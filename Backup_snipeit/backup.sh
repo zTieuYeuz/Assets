@@ -1,3 +1,5 @@
+mkdir -p container
+mkdir -p volume
 #lưu file docker container
 docker commit  snipeit backup_container_snipeit 
 docker save -o ./container/backup_container_snipeit.tar backup_container_snipeit
